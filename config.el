@@ -89,6 +89,13 @@
 
 (use-package! lsp-pyright
   :init (setq lsp-pyright-multi-root nil))
+
+(after! magit
+  (add-to-list 'forge-alist '("yourlabs.io"
+                              "yourlabs.io/api/v4"
+                              "yourlabs.io"
+                              forge-gitlab-repository)))
+
 (after! dap-mode
   (setq dap-python-debugger 'debugpy))
 
