@@ -84,6 +84,7 @@
 (map! :map evil-window-map
       "b" #'evil-window-split
       "m" #'maximize-window
+      "M" #'ace-swap-window
       "é" #'ace-window)
 
 (use-package! lsp-pyright
