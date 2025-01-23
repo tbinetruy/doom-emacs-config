@@ -142,3 +142,5 @@
   ;; Enable display of type information in rescript-mode buffers
   (require 'lsp-ui)
   (add-hook 'rescript-mode-hook 'lsp-ui-doc-mode))
+
+(setq ob-mermaid-cli-path "/usr/bin/mmdc")
