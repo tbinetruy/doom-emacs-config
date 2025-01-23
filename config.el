@@ -99,8 +99,6 @@
                               "yourlabs.io"
                               forge-gitlab-repository)))
 
-(after! dap-mode
-  (setq dap-python-debugger 'debugpy))
 
 (map! :map dap-mode-map
       :leader
