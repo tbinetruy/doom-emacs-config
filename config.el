@@ -144,3 +144,11 @@
   (add-hook 'rescript-mode-hook 'lsp-ui-doc-mode))
 
 (setq ob-mermaid-cli-path "/usr/bin/mmdc")
+
+(use-package python-pytest
+ :config
+ ;; just an extra `-y' after the `-x' suffix
+ (transient-append-suffix
+   'python-pytest-dispatch
+   "--tr"
+   '("--nm" "no migrations" "--no-migrations")))
