@@ -89,6 +89,9 @@
 
 (use-package! lsp-pyright
   :init (setq lsp-pyright-multi-root nil))
+(map! :leader
+      :desc "Find definition in other window"
+      "c w" #'xref-find-definitions-other-window)
 
 (use-package! reason-mode)
 
