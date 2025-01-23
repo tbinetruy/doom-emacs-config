@@ -131,18 +131,6 @@
       :desc "dap breakpoint hit count"   "h" #'dap-breakpoint-hit-condition
       :desc "dap breakpoint log message" "l" #'dap-breakpoint-log-message)
 
-(after! rescript-mode
-  (setq lsp-rescript-server-command
-        '("node" "/home/thomas/.vscode/extensions/chenglou92.rescript-vscode-1.8.2/server/out/server.js" "--stdio"))
-
-  ;; Tell `lsp-mode` about the `rescript-vscode` LSP server
-  (require 'lsp-rescript)
-  ;; Enable `lsp-mode` in rescript-mode buffers
-  (add-hook 'rescript-mode-hook 'lsp-deferred)
-  ;; Enable display of type information in rescript-mode buffers
-  (require 'lsp-ui)
-  (add-hook 'rescript-mode-hook 'lsp-ui-doc-mode))
-
 (require 'oc-bibtex)
 (setq ob-mermaid-cli-path "/usr/bin/mmdc")
 
