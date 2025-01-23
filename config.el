@@ -143,6 +143,7 @@
   (require 'lsp-ui)
   (add-hook 'rescript-mode-hook 'lsp-ui-doc-mode))
 
+(require 'oc-bibtex)
 (setq ob-mermaid-cli-path "/usr/bin/mmdc")
 
 (use-package python-pytest
