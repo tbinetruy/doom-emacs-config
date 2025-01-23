@@ -8,6 +8,7 @@
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;(package! some-package)
+;(package! reason-mode)
 (package! rescript-mode)
 (package! lsp-rescript)
 (package! ob-mermaid)
