@@ -153,5 +153,11 @@
    "--tr"
    '("--nm" "no migrations" "--no-migrations")))
 
+(after! eglot
+  (setq eglot-ignored-server-capabilities '(:inlayHintProvider))
+  (add-to-list 'eglot-server-programs
+               '((python-mode python-ts-mode)
+                 "basedpyright-langserver" "--stdio")))
+
 (after! flycheck
   (setq flycheck-checker-error-threshold 500))
