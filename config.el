@@ -91,7 +91,7 @@
       :desc "Find definition in other window"
       "c w" #'xref-find-definitions-other-window)
 
-(use-package! reason-mode)
+;(use-package! reason-mode)
 
 (after! magit
   (add-to-list 'forge-alist '("yourlabs.io"
