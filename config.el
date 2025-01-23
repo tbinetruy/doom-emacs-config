@@ -152,3 +152,6 @@
    'python-pytest-dispatch
    "--tr"
    '("--nm" "no migrations" "--no-migrations")))
+
+(after! flycheck
+  (setq flycheck-checker-error-threshold 500))
