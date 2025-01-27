@@ -75,11 +75,20 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+(defun +python/open-django-shell ()
+  "Open a Django shell in a REPL."
+  (interactive)
+  (let ((default-directory (locate-dominating-file default-directory "manage.py")))
+    (unless default-directory
+      (error "No manage.py found in this project."))
+    (run-python (format "python manage.py shell") t t)))
+
 (map! :map python-mode-map
       :localleader
       "sr" #'python-shell-send-region
       "sb" #'python-shell-send-buffer
-      "si" #'+python/open-repl)
+      "si" #'+python/open-repl
+      "sd" #'+python/open-django-shell)
 
 (map! :map evil-window-map
       "b" #'evil-window-split
